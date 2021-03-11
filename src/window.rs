@@ -36,7 +36,7 @@ impl Window {
 
     pub fn update(&mut self) {
         self.window
-            .update_with_buffer(&self.buffer)
+            .update_with_buffer(&self.buffer, self.width, self.height)
             .unwrap_or_else(|e| log::error!("Window update failed: {}", e));
     }
 
